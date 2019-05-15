@@ -18,7 +18,7 @@
       
       <guid>/2019/05/15/20190515postscrape/</guid>
       <description>爬取政府报告2019http://www.gov.cn/premier/2019-03/16/content_5374314.htm
-x &amp;lt;- 1:10y &amp;lt;- 51:60plot(x,y)</description>
+x &amp;lt;- 1:10y &amp;lt;- 51:60plot(x,y)library(rvest)## 载入需要的程辑包：xml2## Registered S3 method overwritten by &amp;#39;rvest&amp;#39;:## method from## read_xml.response xml2link &amp;lt;- &amp;quot;http://www.gov.cn/premier/2019-03/16/content_5374314.htm&amp;quot;web&amp;lt;-read_html(link,encoding=&amp;quot;utf-8&amp;quot;) #读取数据，规定编码position&amp;lt;-web %&amp;gt;% html_nodes(&amp;quot;div.pages_content&amp;quot;) %&amp;gt;% html_text()</description>
     </item>
     
     <item>

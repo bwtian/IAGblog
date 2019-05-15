@@ -82,6 +82,14 @@
 y &lt;- 51:60
 plot(x,y)</code></pre>
 <p><img src="/post/2019-05-15-20190515postscrape_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<pre class="r"><code>library(rvest)</code></pre>
+<pre><code>## 载入需要的程辑包：xml2</code></pre>
+<pre><code>## Registered S3 method overwritten by &#39;rvest&#39;:
+##   method            from
+##   read_xml.response xml2</code></pre>
+<pre class="r"><code>link &lt;- &quot;http://www.gov.cn/premier/2019-03/16/content_5374314.htm&quot;
+web&lt;-read_html(link,encoding=&quot;utf-8&quot;) #读取数据，规定编码
+position&lt;-web %&gt;% html_nodes(&quot;div.pages_content&quot;) %&gt;% html_text()</code></pre>
 </div>
 
     </div>
