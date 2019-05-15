@@ -1,0 +1,22 @@
+---
+title: '爬文献'
+author: 't'
+date: '2019-05-15'
+slug: '201905152'
+categories: []
+tags: []
+---
+
+```{r}
+library(rvest)
+library(knitr)
+link <- 'https://www.ncbi.nlm.nih.gov/pubmed/?term=information'
+web <- read_html(link)
+title <- web %>% html_nodes('div.rslt p.title a') %>%html_text()
+author <- web %>% html_nodes('div.supp p.desc') %>%html_text()
+journal <- web %>% html_nodes('div.supp p.details span') %>%html_text()
+dat <- data.frame(Title = title, Author = author, Journal = journal)
+kable(dat, format="html")
+
+```
+
