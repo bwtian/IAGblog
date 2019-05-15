@@ -30,18 +30,19 @@ print(position)
 library(jiebaR)
 engine_s<-worker()#初始化分词引擎并加载停用词。
 seg<-segment(position,engine_s)#分词
-f <- freq(seg)
-f<-f[order(f[2],decreasing=TRUE),] #根据词频降序排列
-f
-print(f)
-engine_s1<-worker(stop_word = "stopwords.txt")
-seg1<-segment(position,engine_s1)
-f1 <- freq(seg1)
-f1<-f1[order(f1[2],decreasing=TRUE),]
+f1 <- freq(seg)
+f1<-f1[order(f1[2],decreasing=TRUE),] #根据词频降序排列
+f1
 print(f1)
+#engine_s1<-worker(stop_word = "stopwords.txt")
+#seg1<-segment(position,engine_s1)
+#f1 <- freq(seg1)
+#f1<-f1[order(f1[2],decreasing=TRUE),]
+#print(f1)
 library(wordcloud2)#加载包
 f2<-f1[1:150,]     #总共有2000多个词，为了显示效果，我只提取前150个字
 wordcloud2(f2, size = 0.8 ,shape='star')    #形状设置为一颗五角星
+getwd()
 ```
 
 
