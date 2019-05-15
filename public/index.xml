@@ -6,10 +6,20 @@
     <description>Recent content on IAG Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 30 Dec 2016 21:49:57 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 15 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>20190515爬虫</title>
+      <link>/2019/05/15/20190515postscrape/</link>
+      <pubDate>Wed, 15 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/2019/05/15/20190515postscrape/</guid>
+      <description>爬取政府报告2019http://www.gov.cn/premier/2019-03/16/content_5374314.htm
+x &amp;lt;- 1:10y &amp;lt;- 51:60plot(x,y)</description>
+    </item>
     
     <item>
       <title>A Plain Markdown Post</title>
